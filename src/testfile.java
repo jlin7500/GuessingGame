@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class testfile {
     public static void main(String[] args) {
-        System.out.println("select difficulty from 1-4 inclusive.");
+        System.out.println("Select difficulty from 1-4 inclusive.");
         Scanner input = new Scanner(System.in);
         int x = input.nextInt();
         if (x == 1)
@@ -19,22 +19,27 @@ public class testfile {
                 {
                     x = 1000;
                 }
-                    else if(x == 4)
+                    if(x == 4)
                     {
                         x = 10000;
                     }
-
-        System.out.println("Guess a number from 1-10");
+        System.out.println("Guess a number from 1 -" + " " + x);
             Random y = new Random();
             int z = input.nextInt();
-            while(y != z)
+            while(y.nextInt(x) != z)
             {
-                String xx = "Try again";
+                if(y.nextInt(x) < z)
+                {
+                    System.out.println("its higher");
+                }
+                
+                input = new Scanner(System.in);
+                System.out.println("try again");
+                z = input.nextInt();
+
             }
-            System.out.println(x);
+            System.out.println("thats the right number");
             input.close();
-
-
     }
 
 }
