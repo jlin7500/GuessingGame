@@ -24,22 +24,40 @@ public class testfile {
                         x = 10000;
                     }
         System.out.println("Guess a number from 1 -" + " " + x);
-            Random y = new Random();
-            int z = input.nextInt();
-            while(y.nextInt(x) != z)
+            double mysteryNum = Math.random()*x;
+            int guess = input.nextInt();
+            //double yawdj = 5.6;
+            //int duiawhd = (int)yawdj;
+            int mysterNum1 = (int)mysteryNum;
+            while(guess != mysterNum1)
             {
-                if(y.nextInt(x) < z)
+                if(guess > mysterNum1)
+                {
+                    System.out.println("its less");
+                }
+                else if(guess < mysterNum1)
+                {
+                    System.out.println("its greater");
+                }
+                guess = input.nextInt();
+            }
+            System.out.println("That's the right number");
+            input.close();
+
+            /*(while(y.nextInt(x) != z)
+            {
+                if(y.nextInt(x)> z)
                 {
                     System.out.println("its higher");
                 }
-                
+                else
+                    System.out.println("its lower");
                 input = new Scanner(System.in);
-                System.out.println("try again");
                 z = input.nextInt();
 
             }
-            System.out.println("thats the right number");
-            input.close();
+            System.out.println("Thats's the right number");
+            input.close();*/
     }
 
 }
