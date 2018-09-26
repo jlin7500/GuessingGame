@@ -26,11 +26,11 @@ public class testfile {
         System.out.println("Guess a number from 1 -" + " " + x);
             double mysteryNum = Math.random()*x;
             int guess = input.nextInt();
-            //double yawdj = 5.6;
-            //int duiawhd = (int)yawdj;
+            int tries = 0;
             int mysterNum1 = (int)mysteryNum;
             while(guess != mysterNum1)
             {
+                tries++;
                 if(guess > mysterNum1)
                 {
                     System.out.println("its less");
@@ -42,22 +42,8 @@ public class testfile {
                 guess = input.nextInt();
             }
             System.out.println("That's the right number");
+            System.out.println("It took " + " " + tries + " " + "to get the right number");
             input.close();
-
-            /*(while(y.nextInt(x) != z)
-            {
-                if(y.nextInt(x)> z)
-                {
-                    System.out.println("its higher");
-                }
-                else
-                    System.out.println("its lower");
-                input = new Scanner(System.in);
-                z = input.nextInt();
-
-            }
-            System.out.println("Thats's the right number");
-            input.close();*/
     }
 
 }
