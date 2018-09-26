@@ -1,19 +1,35 @@
 import java.util.Scanner;
 import java.util.Random;
 
-import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Util.println;
 
 public class testfile {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
+        System.out.println("select difficulty from 1-4 inclusive.");
         Scanner input = new Scanner(System.in);
-        System.out.println("Guess a number from 1-10");
-            int y = Math.random() * 10;
-            int x = input.nextInt();
-
-            while(y != x)
+        int x = input.nextInt();
+        if (x == 1)
+        {
+            x = 10;
+        }
+            if (x == 2)
             {
-                String z = "Try again";
+                x = 100;
+            }
+                if(x == 3)
+                {
+                    x = 1000;
+                }
+                    else if(x == 4)
+                    {
+                        x = 10000;
+                    }
+
+        System.out.println("Guess a number from 1-10");
+            Random y = new Random();
+            int z = input.nextInt();
+            while(y != z)
+            {
+                String xx = "Try again";
             }
             System.out.println(x);
             input.close();
